@@ -41,7 +41,7 @@ export function DesktopBackgroundVideo() {
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/45 via-black/28 to-[#060203]/88" />
       <video
         src="/hero-dragon-2.mp4"
-        className="h-full w-full object-cover object-center opacity-75 transition-all duration-300"
+        className="h-full w-full object-cover object-center opacity-75"
         autoPlay
         loop
         muted
