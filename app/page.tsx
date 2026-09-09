@@ -13,6 +13,7 @@ import { SYMPOSIUM_METADATA } from '@/lib/data/events';
 import {
   Flame,
   Layers,
+  Phone,
 } from 'lucide-react';
 
 import BackgroundVideo from '@/components/background-video';
@@ -102,7 +103,44 @@ export default function HomePage() {
       <FAQSection />
 
       {/* ========================================================================= */}
-      {/* 10. PREMIUM DRAGON FOOTER */}
+      {/* 10. COORDINATORS CONTACT */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-red-500/10">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-xs font-mono text-red-400 mb-4">
+            <Flame className="w-3.5 h-3.5 text-orange-500" />
+            <span>COORDINATOR CONTACTS</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
+            For Further Details, Contact
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { name: 'Ahamed Multhazim. A', phone: '96002 44885' },
+            { name: 'Mohammed Abdul Faazil. A', phone: '94453 28586' },
+            { name: 'Thowbiq Raja', phone: '8807841124' },
+            { name: 'Saravanan B', phone: '8248892060' },
+          ].map((coordinator, idx) => (
+            <div
+              key={idx}
+              className="p-5 rounded-2xl bg-[#0a0305]/80 border border-red-500/15 hover:border-red-500/40 hover:shadow-[0_0_25px_rgba(230,0,26,0.15)] transition-all flex flex-col items-center text-center gap-3 group"
+            >
+              <div className="w-12 h-12 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform">
+                <Phone className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-white">{coordinator.name}</p>
+                <p className="text-xs text-slate-400 font-mono mt-1">{coordinator.phone}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 11. PREMIUM DRAGON FOOTER */}
       {/* ========================================================================= */}
       <footer className="border-t border-red-500/20 bg-[#060203] py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
