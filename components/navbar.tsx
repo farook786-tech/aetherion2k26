@@ -26,7 +26,6 @@ export default function Navbar() {
     { label: 'Schedule', href: '#schedule' },
     { label: 'Rules', href: '#rules' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Contact', href: '#contact' },
   ];
 
   const getHref = (hash: string) => {
