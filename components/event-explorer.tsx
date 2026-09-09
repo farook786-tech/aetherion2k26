@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { EventItem, EVENTS_DATA } from '@/lib/data/events';
 import EventModal from './event-modal';
