@@ -527,6 +527,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Sparkles',
     badge: 'Fun & Witty',
+    posterImage: '/posters/wrong-answers-only.jpg',
     isActive: true,
   },
 
