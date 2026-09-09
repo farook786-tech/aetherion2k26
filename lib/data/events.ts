@@ -586,6 +586,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Gamepad2',
     badge: 'High Stakes',
+    posterImage: '/posters/e-football.jpg',
     isActive: true,
   },
 ];
