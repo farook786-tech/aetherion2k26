@@ -43,6 +43,7 @@ export interface EventItem {
   judgingCriteria?: string[];
   iconName: string;
   badge?: string;
+  posterImage?: string;
   isActive: boolean;
 }
 
@@ -121,6 +122,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Cpu',
     badge: 'Popular',
+    posterImage: '/posters/neural-quest.jpg',
     isActive: true,
   },
   {
@@ -166,6 +168,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Terminal',
     badge: 'Hardcore',
+    posterImage: '/posters/ai-escape-room.jpg',
     isActive: true,
   },
   {
@@ -208,6 +211,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Presentation',
     badge: 'Research',
+    posterImage: '/posters/ppt.jpg',
     isActive: true,
   },
   {
@@ -256,6 +260,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Palette',
     badge: 'Creative',
+    posterImage: '/posters/ai-web-sprint.jpg',
     isActive: true,
   },
   {
@@ -300,6 +305,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Terminal',
     badge: 'Hardcore',
+    posterImage: '/posters/code-debugging.jpg',
     isActive: true,
   },
 
@@ -342,6 +348,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Gamepad2',
     badge: 'High Stakes',
+    posterImage: '/posters/free-fire.jpg',
     isActive: true,
   },
   {
@@ -386,6 +393,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Film',
     badge: 'Exciting',
+    posterImage: '/posters/film-hunt.jpg',
     isActive: true,
   },
   {
@@ -428,6 +436,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Mic2',
     badge: 'Live',
+    posterImage: '/posters/voice-and-noise.jpg',
     isActive: true,
   },
   {
@@ -471,6 +480,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Palette',
     badge: 'Creative',
+    posterImage: '/posters/creative-quest.jpg',
     isActive: true,
   },
   {
@@ -646,7 +656,7 @@ export const RULES_SECTIONS = [
     id: 'special-offer',
     title: 'Special Offer',
     rules: [
-      'Special Offer: First 25 female participants will receive complimentary palm mehndi art at the venue.',
+      'Special Offer: 15 random female participants will receive complimentary palm mehndi art at the venue.',
     ]
   }
 ];

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, MapPin, Ticket } from 'lucide-react';
 import { GOOGLE_FORM_REGISTRATION_URL, SYMPOSIUM_METADATA } from '@/lib/data/events';
+import EventCountdown from './event-countdown';
 
 export default function HeroSection() {
   return (
@@ -46,7 +47,10 @@ export default function HeroSection() {
           </a>
         </div>
 
-        <div className="entry-pass-card group relative mx-auto mt-6 w-full max-w-[420px] cursor-default rounded-2xl p-[1px] transition-transform duration-300 hover:scale-[1.03]">
+        {/* Dynamic Fiery Live Countdown */}
+        <EventCountdown />
+
+        <div className="entry-pass-card group relative mx-auto mt-2 w-full max-w-[420px] cursor-default rounded-2xl p-[1px] transition-transform duration-300 hover:scale-[1.03]">
           <div className="relative overflow-hidden rounded-2xl bg-[#0a0305]/80 px-4 py-4 sm:px-5 backdrop-blur-xl">
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-red-500/10 via-transparent to-orange-500/10" />
             <div className="relative flex flex-col items-center">
@@ -90,7 +94,7 @@ export default function HeroSection() {
             href="#events"
             className="inline-flex w-full items-center justify-center rounded-xl border border-red-400/40 bg-black/55 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:border-red-300/70 hover:bg-black/70 sm:w-auto"
           >
-            Explore 11 Events
+            Explore 10 Events
           </a>
         </div>
       </div>

@@ -71,6 +71,26 @@ export default function CertificateEligibilityNote({ className = '' }: { classNa
           </p>
         </div>
       </div>
+
+      {/* Special Offer Highlight Banner */}
+      <div className="p-4 rounded-xl bg-gradient-to-r from-amber-950/30 via-red-950/20 to-orange-950/30 border border-amber-500/30 flex items-start gap-3 shadow-[0_0_20px_rgba(245,158,11,0.1)]">
+        <div className="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0 mt-0.5">
+          ✨
+        </div>
+        <div>
+          <div className="flex items-center gap-2">
+            <h5 className="text-xs font-bold text-white uppercase tracking-wider font-mono">
+              Special Offer
+            </h5>
+            <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-bold">
+              Exclusive Benefit
+            </span>
+          </div>
+          <p className="text-[12px] text-slate-200 leading-relaxed mt-1">
+            <strong className="text-amber-400">15 random female participants</strong> will receive complimentary palm mehndi art at the venue! 🌿
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

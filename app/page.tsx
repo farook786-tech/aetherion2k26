@@ -155,6 +155,49 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+
+        {/* 3D Animated Official Instagram Showcase Card */}
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://www.instagram.com/aetherion_2k26_?stkn=MXhxbmJvODdoeWw0aQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-4 px-6 sm:px-8 py-4 rounded-2xl bg-gradient-to-r from-[#120306]/95 via-[#1a050b]/95 to-[#120306]/95 border border-red-500/30 hover:border-red-500/70 shadow-[0_10px_35px_rgba(230,0,26,0.25)] hover:shadow-[0_15px_45px_rgba(230,0,26,0.45)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 active:translate-y-0"
+          >
+            {/* Ambient Background Glow */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 via-pink-600 to-amber-500 rounded-2xl opacity-30 group-hover:opacity-80 blur-md transition duration-500 animate-pulse pointer-events-none" />
+
+            {/* 3D Animated Floating Instagram Icon */}
+            <div className="relative flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-tr from-[#f97316] via-[#e11d48] to-[#9333ea] shadow-[0_4px_20px_rgba(225,29,72,0.6),inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-2px_4px_rgba(0,0,0,0.4)] border border-white/25 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+              <svg
+                viewBox="0 0 24 24"
+                className="w-6 h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+              {/* Highlight Shimmer Reflection */}
+              <div className="absolute top-0.5 left-1 right-1 h-2 rounded-t-lg bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
+            </div>
+
+            {/* Label & Handle */}
+            <div className="relative text-left">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-red-400 block mb-0.5">
+                Official Instagram Page
+              </span>
+              <span className="text-sm sm:text-base font-black text-white group-hover:text-red-200 transition-colors flex items-center gap-1.5">
+                @aetherion_2k26_
+                <span className="text-xs text-red-400 font-mono transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </span>
+            </div>
+          </a>
+        </div>
       </section>
 
       {/* ========================================================================= */}
