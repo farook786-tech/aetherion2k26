@@ -9,6 +9,7 @@ import ScheduleSection from '@/components/schedule-section';
 import RulesSection from '@/components/rules-section';
 import FAQSection from '@/components/faq-section';
 import CustomCursor from '@/components/custom-cursor';
+import PromoModal from '@/components/promo-modal';
 import { SYMPOSIUM_METADATA } from '@/lib/data/events';
 import {
   Flame,
@@ -118,10 +119,10 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { name: 'Ahamed Multhazim. A', phone: '96002 44885' },
-            { name: 'Mohammed Abdul Faazil. A', phone: '94453 28586' },
-            { name: 'Thowbiq Raja', phone: '8807841124' },
-            { name: 'Saravanan B', phone: '8248892060' },
+            { name: 'Ahamed Multhazim. A', phone: '9600244885', href: 'tel:+919600244885', wa: 'https://wa.me/919600244885' },
+            { name: 'Mohammed Abdul Faazil. A', phone: '9445328586', href: 'tel:+919445328586', wa: 'https://wa.me/919445328586' },
+            { name: 'Thowbiq Raja', phone: '8807841124', href: 'tel:+918807841124', wa: 'https://wa.me/918807841124' },
+            { name: 'Saravanan B', phone: '8248892060', href: 'tel:+918248892060', wa: 'https://wa.me/918248892060' },
           ].map((coordinator, idx) => (
             <div
               key={idx}
@@ -133,6 +134,23 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-bold text-white">{coordinator.name}</p>
                 <p className="text-xs text-slate-400 font-mono mt-1">{coordinator.phone}</p>
+                <div className="flex items-center justify-center gap-2 mt-2">
+                  <a
+                    href={coordinator.href}
+                    className="text-xs font-semibold text-red-400 hover:text-red-300 transition-colors"
+                  >
+                    Call
+                  </a>
+                  <span className="text-slate-600">|</span>
+                  <a
+                    href={coordinator.wa}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-green-400 hover:text-green-300 transition-colors"
+                  >
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           ))}
@@ -175,6 +193,8 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      <PromoModal />
     </div>
   );
 }

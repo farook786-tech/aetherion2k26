@@ -585,17 +585,17 @@ export const TIMELINE_SCHEDULE = [
     label: "Symposium Itinerary",
     items: [
       { time: "09:00 AM - 10:00 AM", title: "AETHERION'26 Symposium Name Reveal & Delegate Kit Distribution", venue: "Main Auditorium", category: "Special" },
-      { time: "10:30 AM - 11:15 AM", title: "Neural Quest", venue: "Tech Hall 1", category: "Technical" },
-      { time: "10:30 AM - 11:15 AM", title: "AI Escape Room", venue: "Computing Hub A", category: "Technical" },
-      { time: "10:45 AM - 11:45 AM", title: "PPT (Paper Presentation)", venue: "Conference Auditorium", category: "Technical" },
-      { time: "10:45 AM - 11:45 AM", title: "AI Web Sprint", venue: "Design Studio Lab", category: "Technical" },
-      { time: "11:45 AM - 12:30 PM", title: "Code Debugging", venue: "Computing Lab B", category: "Technical" },
-      { time: "12:30 PM - 01:30 PM", title: "Lunch Distribution for All Participants", venue: "Dining Pavilion", category: "General" },
-      { time: "01:20 PM - 02:15 PM", title: "Film Hunt", venue: "Campus Quad & Media Lab", category: "Non-Technical" },
-      { time: "02:15 PM - 03:30 PM", title: "E-Sports: Free Fire & E-Football", venue: "E-Sports Arena", category: "Non-Technical" },
-      { time: "03:30 PM - 04:15 PM", title: "Voice & Noise", venue: "Acoustic Stage", category: "Non-Technical" },
-      { time: "04:15 PM - 05:00 PM", title: "Creative Quest", venue: "Design Studio & Creative Hub", category: "Non-Technical" },
-      { time: "04:15 PM - 05:00 PM", title: "Wrong Answers Only", venue: "Open Amphitheatre", category: "Non-Technical" },
+      { time: "11:00 AM - 11:45 AM", title: "Neural Quest", venue: "Tech Hall 1", category: "Technical" },
+      { time: "11:00 AM - 11:45 AM", title: "PPT (Paper Presentation)", venue: "Conference Auditorium", category: "Technical" },
+      { time: "12:00 PM - 12:45 PM", title: "AI Escape Room", venue: "Computing Hub A", category: "Technical" },
+      { time: "12:00 PM - 12:45 PM", title: "AI Web Sprint", venue: "Design Studio Lab", category: "Technical" },
+      { time: "12:00 PM - 12:45 PM", title: "Code Debugging", venue: "Computing Lab B", category: "Technical" },
+      { time: "12:45 PM - 01:30 PM", title: "Lunch Distribution for All Participants", venue: "Dining Pavilion", category: "General" },
+      { time: "01:30 PM - 02:15 PM", title: "Film Hunt", venue: "Campus Quad & Media Lab", category: "Non-Technical" },
+      { time: "01:30 PM - 03:30 PM", title: "E-Sports: Free Fire & E-Football", venue: "E-Sports Arena", category: "E-Sports" },
+      { time: "02:20 PM - 03:00 PM", title: "Voice & Noise", venue: "Acoustic Stage / Open Amphitheatre", category: "Non-Technical" },
+      { time: "03:10 PM - 04:00 PM", title: "Creative Quest", venue: "Design Studio & Creative Hub", category: "Non-Technical" },
+      { time: "03:10 PM - 04:00 PM", title: "Wrong Answers Only", venue: "Open Amphitheatre", category: "Non-Technical" },
     ]
   }
 ];

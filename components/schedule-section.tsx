@@ -5,7 +5,7 @@ import { TIMELINE_SCHEDULE } from '@/lib/data/events';
 import { Calendar, Clock, MapPin, Tag, ChevronRight, Flame } from 'lucide-react';
 
 export default function ScheduleSection() {
-  const [filterCategory, setFilterCategory] = useState<'All' | 'Technical' | 'Non-Technical' | 'Special'>('All');
+  const [filterCategory, setFilterCategory] = useState<'All' | 'Technical' | 'Non-Technical' | 'E-Sports'>('All');
 
   const currentDayData = TIMELINE_SCHEDULE[0];
 
@@ -44,7 +44,7 @@ export default function ScheduleSection() {
 
         {/* Category Pill Filters */}
         <div className="flex items-center gap-2">
-          {(['All', 'Technical', 'Non-Technical', 'Special'] as const).map((cat) => (
+          {(['All', 'Technical', 'Non-Technical', 'E-Sports'] as const).map((cat) => (
             <button
               key={cat}
               onClick={() => setFilterCategory(cat)}
@@ -65,6 +65,7 @@ export default function ScheduleSection() {
         {filteredItems.map((item, idx) => {
           const isTech = item.category === 'Technical';
           const isNonTech = item.category === 'Non-Technical';
+          const isEsports = item.category === 'E-Sports';
           const isSpecial = item.category === 'Special';
 
           return (
@@ -76,6 +77,8 @@ export default function ScheduleSection() {
                     ? 'border-red-500 shadow-[0_0_10px_#e6001a]'
                     : isNonTech
                     ? 'border-orange-500 shadow-[0_0_10px_#f97316]'
+                    : isEsports
+                    ? 'border-purple-500 shadow-[0_0_10px_#a855f7]'
                     : 'border-white/80 shadow-[0_0_10px_#ffffff]'
                 }`}
               />
@@ -94,6 +97,8 @@ export default function ScheduleSection() {
                           ? 'bg-red-500/10 text-red-300 border-red-500/20'
                           : isNonTech
                           ? 'bg-orange-500/10 text-orange-300 border-orange-500/20'
+                          : isEsports
+                          ? 'bg-purple-500/10 text-purple-300 border-purple-500/20'
                           : 'bg-white/10 text-slate-200 border-white/20'
                       }`}
                     >
