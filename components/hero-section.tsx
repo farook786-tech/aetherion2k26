@@ -27,11 +27,7 @@ export default function HeroSection() {
         </h2>
 
         <p className="mt-6 max-w-[820px] text-sm leading-relaxed text-slate-100 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] sm:text-base md:text-lg">
-          Proudly presented by <strong className="text-fire-red">AMSphere</strong>,{' '}
-          <strong className="text-fire-red">AETHERION&apos;26</strong> is a national-scale flagship symposium
-          for engineers, creators, competitive coders, and gamers. Register at ₹150 per person, or ₹300
-          for a team of 2–3 — then pick the arenas that match your squad size. Guided by{' '}
-          <span className="font-semibold text-fire-red">POWER • INNOVATION • COMPETITION • CREATIVITY • FUTURE</span>.
+          A national-level technical symposium bringing together engineers, coders, and creators for competitive technical tracks, non-technical challenges, and esports.
         </p>
 
         <div className="mt-7 flex flex-col items-center text-center">
@@ -50,28 +46,28 @@ export default function HeroSection() {
           </a>
         </div>
 
-        <div className="entry-pass-card group relative mx-auto mt-8 w-full max-w-[420px] cursor-default rounded-2xl p-[1px] transition-transform duration-300 hover:scale-[1.03]">
-          <div className="relative overflow-hidden rounded-2xl bg-[#0a0305]/80 px-5 py-6 sm:px-6 backdrop-blur-xl">
+        <div className="entry-pass-card group relative mx-auto mt-6 w-full max-w-[420px] cursor-default rounded-2xl p-[1px] transition-transform duration-300 hover:scale-[1.03]">
+          <div className="relative overflow-hidden rounded-2xl bg-[#0a0305]/80 px-4 py-4 sm:px-5 backdrop-blur-xl">
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-red-500/10 via-transparent to-orange-500/10" />
             <div className="relative flex flex-col items-center">
               <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-[#ff2a00]">
                 <Ticket className="h-3.5 w-3.5" />
                 Entry Pass
               </span>
-              <div className="mt-4 grid w-full grid-cols-2 divide-x divide-red-500/30">
+              <div className="mt-3 grid w-full grid-cols-2 divide-x divide-red-500/30">
                 <div className="flex flex-col items-center px-3">
-                  <span className="text-4xl font-black tracking-tight text-white drop-shadow-[0_0_22px_rgba(230,0,26,0.55)] sm:text-5xl">
+                  <span className="text-3xl font-black tracking-tight text-white drop-shadow-[0_0_22px_rgba(230,0,26,0.55)] sm:text-4xl">
                     ₹150
                   </span>
-                  <span className="mt-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#ff1a00]">
+                  <span className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#ff1a00]">
                     Per Person
                   </span>
                 </div>
                 <div className="flex flex-col items-center px-3">
-                  <span className="text-4xl font-black tracking-tight text-white drop-shadow-[0_0_22px_rgba(230,0,26,0.55)] sm:text-5xl">
+                  <span className="text-3xl font-black tracking-tight text-white drop-shadow-[0_0_22px_rgba(230,0,26,0.55)] sm:text-4xl">
                     ₹300
                   </span>
-                  <span className="mt-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#ff1a00]">
+                  <span className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#ff1a00]">
                     Team of 2–3
                   </span>
                 </div>

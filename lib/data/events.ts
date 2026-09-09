@@ -72,7 +72,7 @@ export const SYMPOSIUM_METADATA = {
     { label: "Technical Events", value: "5", prefix: "" },
     { label: "Non-Technical Events", value: "4", prefix: "" },
     { label: "E-Sports Events", value: "2", prefix: "" },
-    { label: "Per Person / Team 2–3", value: "₹150 / ₹300", prefix: "" },
+    { label: "₹300 Team (2–3 Members)", value: "₹150 Individual", prefix: "" },
   ]
 };
 
@@ -640,6 +640,13 @@ export const RULES_SECTIONS = [
       'Accurately enter the 12-digit UTR / Transaction ID in the registration verification step.',
       'Upload a clear screenshot of the completed payment receipt showing the UTR and timestamp.',
       'Your registration will be marked as "Payment Verification Pending" until verified by the symposium finance team.',
+    ]
+  },
+  {
+    id: 'special-offer',
+    title: 'Special Offer',
+    rules: [
+      'Special Offer: First 25 female participants will receive complimentary palm mehndi art at the venue.',
     ]
   }
 ];

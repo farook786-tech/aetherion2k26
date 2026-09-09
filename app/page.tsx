@@ -62,12 +62,12 @@ export default function HomePage() {
             {SYMPOSIUM_METADATA.stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="p-5 sm:p-6 rounded-2xl bg-surface border border-border hover:border-red-500/40 hover:shadow-[0_0_25px_rgba(230,0,26,0.2)] transition-all flex flex-col items-center justify-between group"
+                className="p-4 sm:p-5 rounded-2xl bg-[#0a0305]/80 border border-red-500/15 hover:border-red-500/40 hover:shadow-[0_0_25px_rgba(230,0,26,0.15)] transition-all flex flex-col items-center justify-between group"
               >
-                <span className="text-3xl sm:text-4xl font-black font-mono text-white group-hover:text-[#ff1a00] transition-colors">
+                <span className="text-2xl sm:text-3xl font-black font-mono text-white group-hover:text-[#ff1a00] transition-colors">
                   {stat.value}
                 </span>
-                <span className="text-[11px] sm:text-xs text-slate-200 font-mono mt-3 leading-snug">
+                <span className="text-[10px] sm:text-xs text-slate-300 font-mono mt-2 leading-snug text-center">
                   {stat.label}
                 </span>
               </div>

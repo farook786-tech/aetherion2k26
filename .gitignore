@@ -5,3 +5,4 @@ node_modules/
 .env*.local
 *.tsbuildinfo
 WhatsApp Video 2026-08-31 at 8.37.36 AM.mp4
+.vercel
