@@ -9,7 +9,7 @@ import ScheduleSection from '@/components/schedule-section';
 import RulesSection from '@/components/rules-section';
 import FAQSection from '@/components/faq-section';
 import CustomCursor from '@/components/custom-cursor';
-import PromoModal from '@/components/promo-modal';
+import PromoWidget from '@/components/promo-modal';
 import { SYMPOSIUM_METADATA } from '@/lib/data/events';
 import {
   Flame,
@@ -194,7 +194,7 @@ export default function HomePage() {
         </div>
       </footer>
 
-      <PromoModal />
+      <PromoWidget />
     </div>
   );
 }

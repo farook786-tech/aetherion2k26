@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { TIMELINE_SCHEDULE } from '@/lib/data/events';
-import { Calendar, Clock, MapPin, Tag, ChevronRight, Flame } from 'lucide-react';
+import { Calendar, Clock, Flame } from 'lucide-react';
 
 export default function ScheduleSection() {
   const [filterCategory, setFilterCategory] = useState<'All' | 'Technical' | 'Non-Technical' | 'E-Sports'>('All');
@@ -107,8 +107,8 @@ export default function ScheduleSection() {
                   </div>
 
                   <span className="text-xs text-slate-400 flex items-center gap-1">
-                    <MapPin className="w-3.5 h-3.5 text-slate-500" />
-                    {item.venue}
+                    <Flame className="w-3.5 h-3.5 text-orange-500" />
+                    AI & DS Dept
                   </span>
                 </div>
 

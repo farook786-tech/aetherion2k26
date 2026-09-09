@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { EventItem, EVENTS_DATA } from '@/lib/data/events';
 import EventModal from './event-modal';
@@ -15,12 +15,10 @@ import {
   Dumbbell,
   Sparkles,
   Clock,
-  MapPin,
   Users,
   IndianRupee,
   ChevronRight,
   Flame,
-  RotateCcw,
 } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -50,7 +48,6 @@ function EventShowcaseCard({
   index: number;
   onOpen: (event: EventItem) => void;
 }) {
-  const [flipped, setFlipped] = useState(false);
   const isTechnical = event.category === 'technical';
   const isEsports = event.category === 'e-sports';
 
@@ -72,101 +69,58 @@ function EventShowcaseCard({
       ? 'border-orange-500/30 bg-orange-500/10 text-orange-200'
       : 'border-amber-500/30 bg-amber-500/10 text-amber-200';
 
-  const toggleFlip = () => setFlipped((prev) => !prev);
-
   return (
     <motion.article
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.45, delay: index * 0.1, ease: 'easeOut' }}
-      whileHover={flipped ? undefined : { y: -6 }}
-      className="event-flip-scene h-[300px] sm:h-[320px]"
+      whileHover={{ y: -6 }}
+      className="event-card-shell group flex h-full w-full flex-col overflow-hidden rounded-2xl border bg-[#0a0305]/80 p-6 text-center backdrop-blur-xl transition-all"
     >
-      <div className={`event-flip-inner ${flipped ? 'is-flipped' : ''}`}>
-        <button
-          type="button"
-          onClick={toggleFlip}
-          aria-pressed={flipped}
-          aria-label={`Flip ${event.title} to see details`}
-          className={`event-flip-face event-card-shell group flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-2xl border p-6 text-center ${accentBorder}`}
-        >
-          <div
-            className={`pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full blur-3xl transition-opacity duration-300 group-hover:opacity-100 ${
-              isTechnical ? 'bg-red-600/20 opacity-60' : 'bg-orange-500/20 opacity-50'
-            }`}
-          />
-          <div
-            className={`relative mb-5 flex h-14 w-14 items-center justify-center rounded-xl border transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${iconWrap}`}
-          >
-            {iconMap[event.iconName] || <Flame className="w-5 h-5" />}
-          </div>
-          <span className={`relative mb-3 rounded-full border px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider ${badge}`}>
-            {CATEGORY_LABEL[event.category]}
-          </span>
-          <h3 className="relative px-2 text-xl font-black tracking-wide text-white transition-colors group-hover:text-red-200 sm:text-2xl">
-            {event.title}
-          </h3>
-          <p className="relative mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-orange-200/80">
-            Click to swap for details
-          </p>
-        </button>
+      <div
+        className={`pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full blur-3xl transition-opacity duration-300 group-hover:opacity-100 ${
+          isTechnical ? 'bg-red-600/20 opacity-60' : 'bg-orange-500/20 opacity-50'
+        }`}
+      />
+      <div
+        className={`relative mb-5 flex h-14 w-14 items-center justify-center rounded-xl border transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${iconWrap}`}
+      >
+        {iconMap[event.iconName] || <Flame className="w-5 h-5" />}
+      </div>
+      <span className={`relative mb-3 rounded-full border px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider ${badge}`}>
+        {CATEGORY_LABEL[event.category]}
+      </span>
+      <h3 className="relative px-2 text-xl font-black tracking-wide text-white transition-colors group-hover:text-red-200 sm:text-2xl">
+        {event.title}
+      </h3>
+      <p className="relative mt-3 text-xs leading-relaxed text-slate-300 line-clamp-3">
+        {event.shortDesc}
+      </p>
 
-        <div
-          role="button"
-          tabIndex={flipped ? 0 : -1}
-          onClick={toggleFlip}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              toggleFlip();
-            }
-          }}
-          aria-label={`Flip ${event.title} back to name`}
-          className={`event-flip-face event-flip-back event-card-shell flex h-full w-full cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border p-5 sm:p-6 ${accentBorder}`}
-        >
-          <div className="relative min-h-0 flex-1">
-            <div className="mb-3 flex items-start justify-between gap-3">
-              <h3 className="text-lg font-black tracking-wide text-white">{event.title}</h3>
-              <span className="shrink-0 rounded-lg border border-white/15 bg-white/[0.05] p-1.5 text-slate-200">
-                <RotateCcw className="h-3.5 w-3.5" />
-              </span>
-            </div>
-            <p className="text-sm leading-relaxed text-slate-200 line-clamp-3">
-              {event.shortDesc}
-            </p>
-            <div className="mt-4 grid grid-cols-1 gap-2 border-t border-white/10 pt-3 text-[12px] text-slate-200 sm:grid-cols-2">
-              <div className="flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5 shrink-0 text-red-400" />
-                <span>{event.time}</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <MapPin className="h-3.5 w-3.5 shrink-0 text-orange-400" />
-                <span>{event.venue}</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Users className="h-3.5 w-3.5 shrink-0 text-red-300" />
-                <span>{event.teamSize}</span>
-              </div>
-              <div className="flex items-center gap-1.5 font-bold text-white">
-                <IndianRupee className="h-3.5 w-3.5 shrink-0 text-orange-300" />
-                <span>₹150 / person · ₹300 team (2–3)</span>
-              </div>
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              onOpen(event);
-            }}
-            className="relative mt-4 flex w-full items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/[0.05] py-2.5 px-3 text-xs font-semibold text-white transition-colors hover:border-red-400/40 hover:bg-white/[0.09]"
-          >
-            <span>View Full Details</span>
-            <ChevronRight className="h-3.5 w-3.5 text-red-400" />
-          </button>
+      <div className="relative mt-5 grid grid-cols-1 gap-2 border-t border-white/10 pt-4 text-left text-[12px] text-slate-200 sm:grid-cols-2">
+        <div className="flex items-center gap-1.5">
+          <Clock className="h-3.5 w-3.5 shrink-0 text-red-400" />
+          <span>{event.time}</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <Users className="h-3.5 w-3.5 shrink-0 text-orange-400" />
+          <span>{event.teamSize}</span>
+        </div>
+        <div className="flex items-center gap-1.5 font-bold text-white sm:col-span-2">
+          <IndianRupee className="h-3.5 w-3.5 shrink-0 text-orange-300" />
+          <span>₹150 / person · ₹300 team (2–3)</span>
         </div>
       </div>
+
+      <button
+        type="button"
+        onClick={() => onOpen(event)}
+        className="relative mt-5 flex w-full items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/[0.05] py-2.5 px-3 text-xs font-semibold text-white transition-colors hover:border-red-400/40 hover:bg-white/[0.09]"
+      >
+        <span>View Full Details</span>
+        <ChevronRight className="h-3.5 w-3.5 text-red-400" />
+      </button>
     </motion.article>
   );
 }
@@ -227,9 +181,6 @@ export default function EventExplorer() {
         </h2>
         <p className="text-slate-200 text-sm sm:text-base mt-3 leading-relaxed">
           Five technical arenas, four non-technical challenges, and two e-sports titles. ₹150 per person, or ₹300 for a team of 2–3. For specific games, look into the required members and decide what you want to join.
-        </p>
-        <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-orange-200/80">
-          Click a card to swap and reveal details
         </p>
       </div>
 
