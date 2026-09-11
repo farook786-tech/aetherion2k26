@@ -41,7 +41,8 @@ export async function POST(req: NextRequest) {
       userId = user?._id ?? null;
     }
 
-    const regAmount = amount ?? 150;
+    const allowedAmounts = [150, 300];
+    const regAmount = allowedAmounts.includes(Number(amount)) ? Number(amount) : 150;
 
     const registration = await Registration.create({
       registrationId: generateRegId(),

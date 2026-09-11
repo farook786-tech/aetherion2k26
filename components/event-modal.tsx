@@ -85,7 +85,7 @@ export default function EventModal({ event, onClose }: EventModalProps) {
             </div>
             <div className="flex items-center gap-2 text-slate-300">
               <Trophy className="w-4 h-4 text-amber-400 flex-shrink-0" />
-              <span>₹150 / person · ₹300 team (2–3)</span>
+              <span>Pass: ₹150 solo · ₹300 team (2–3)</span>
             </div>
           </div>
         </div>
@@ -264,7 +264,7 @@ export default function EventModal({ event, onClose }: EventModalProps) {
           <div>
             <span className="text-xs text-slate-400 block">Symposium Delegate Pass</span>
             <span className="text-lg font-bold font-mono text-red-400">
-              ₹150 / ₹300 <span className="text-xs text-slate-400 font-normal">(person / team of 2–3)</span>
+              ₹150 / ₹300 <span className="text-xs text-slate-400 font-normal">(solo / team of 2–3)</span>
             </span>
           </div>
 

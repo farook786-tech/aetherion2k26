@@ -26,6 +26,7 @@ export default function Navbar() {
     { label: 'Schedule', href: '#schedule' },
     { label: 'Rules', href: '#rules' },
     { label: 'FAQ', href: '#faq' },
+    { label: 'Coordinators', href: '#coordinators' },
   ];
 
   const getHref = (hash: string) => {
@@ -86,7 +87,7 @@ export default function Navbar() {
           >
             <span className="absolute inset-0 bg-gradient-to-r from-red-600 via-orange-600 to-red-700 rounded-xl animate-gradient opacity-90 group-hover:opacity-100 transition-opacity" />
             <span className="relative flex items-center gap-1.5 px-4 py-2 bg-[#0d0406] rounded-[11px] text-white transition-colors group-hover:bg-transparent">
-              <span>REGISTER</span>
+              <span>REGISTER (₹150 / ₹300)</span>
               <ArrowRight className="w-3.5 h-3.5 text-red-400 group-hover:translate-x-0.5 transition-transform" />
             </span>
           </a>
@@ -127,7 +128,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center bg-gradient-to-r from-red-600 via-orange-600 to-red-700 text-white font-black text-sm py-3.5 rounded-xl shadow-[0_0_30px_rgba(230,0,26,0.6)] active:scale-95 transition-transform"
             >
-              REGISTER FOR AETHERION&apos;26
+              REGISTER FOR AETHERION&apos;26 (₹150 / ₹300)
             </a>
           </div>
         </div>
