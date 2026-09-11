@@ -38,6 +38,25 @@ const CATEGORY_LABEL: Record<string, string> = {
   'non-technical': 'Non-Technical',
 };
 
+function WhatsAppIcon({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+      className={className}
+    >
+      <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+      <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+    </svg>
+  );
+}
+
 function EventShowcaseCard({
   event,
   index,
@@ -56,7 +75,7 @@ function EventShowcaseCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.45, delay: index * 0.1, ease: 'easeOut' }}
-      className="group h-[420px] [perspective:1200px]"
+      className="group h-[440px] [perspective:1200px]"
     >
       <motion.div
         className="relative h-full w-full"
@@ -66,7 +85,7 @@ function EventShowcaseCard({
       >
         {/* Front Face - Event Name */}
         <div
-          className={`absolute inset-0 flex flex-col items-center justify-center rounded-2xl border p-6 cursor-pointer ${
+          className={`absolute inset-0 flex flex-col items-center justify-between rounded-2xl border p-6 cursor-pointer ${
             isTechnical
               ? 'border-red-500/25 bg-gradient-to-br from-red-950/40 via-black/60 to-surface'
               : 'border-amber-500/20 bg-gradient-to-br from-amber-950/30 via-black/60 to-surface'
@@ -80,7 +99,7 @@ function EventShowcaseCard({
             }`}
           />
 
-          <div className="relative flex flex-col items-center text-center space-y-4">
+          <div className="relative flex flex-col items-center text-center space-y-4 my-auto">
             <div
               className={`flex h-14 w-14 items-center justify-center rounded-xl border ${
                 isTechnical
@@ -109,6 +128,24 @@ function EventShowcaseCard({
               Click to view details
             </p>
           </div>
+
+          {event.whatsappGroup && (
+            <div className="relative z-10 w-full pt-2">
+              <a
+                href={event.whatsappGroup}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                aria-label={`Join ${event.title} WhatsApp Group`}
+                className="group/wa flex w-full items-center justify-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-950/20 py-2.5 px-3 text-xs font-semibold text-emerald-300 backdrop-blur-sm transition-all hover:border-emerald-400/60 hover:bg-emerald-900/30 hover:text-emerald-200 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] active:scale-[0.98]"
+              >
+                <WhatsAppIcon className="w-4 h-4 text-emerald-400 transition-transform group-hover/wa:scale-110" />
+                <span className="tracking-wide uppercase text-[11px] font-mono font-bold">
+                  Join WhatsApp Group
+                </span>
+              </a>
+            </div>
+          )}
         </div>
 
         {/* Back Face - Event Details */}
@@ -160,14 +197,32 @@ function EventShowcaseCard({
             </p>
           </div>
 
-          <button
-            type="button"
-            onClick={() => onOpen(event)}
-            className="relative mt-4 flex w-full items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/[0.05] py-2.5 px-3 text-xs font-semibold text-white transition-colors hover:border-red-400/40 hover:bg-white/[0.09]"
-          >
-            <span>View Details</span>
-            <ChevronRight className="h-3.5 w-3.5 text-red-400" />
-          </button>
+          <div className="mt-4 space-y-2">
+            {event.whatsappGroup && (
+              <a
+                href={event.whatsappGroup}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                aria-label={`Join ${event.title} WhatsApp Group`}
+                className="group/wa flex w-full items-center justify-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-950/20 py-2 px-3 text-xs font-semibold text-emerald-300 backdrop-blur-sm transition-all hover:border-emerald-400/60 hover:bg-emerald-900/30 hover:text-emerald-200 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] active:scale-[0.98]"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-400 transition-transform group-hover/wa:scale-110" />
+                <span className="tracking-wide uppercase text-[10px] font-mono font-bold">
+                  Join WhatsApp Group
+                </span>
+              </a>
+            )}
+
+            <button
+              type="button"
+              onClick={() => onOpen(event)}
+              className="relative flex w-full items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/[0.05] py-2 px-3 text-xs font-semibold text-white transition-colors hover:border-red-400/40 hover:bg-white/[0.09]"
+            >
+              <span>View Details</span>
+              <ChevronRight className="h-3.5 w-3.5 text-red-400" />
+            </button>
+          </div>
         </div>
       </motion.div>
     </motion.article>

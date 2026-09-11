@@ -43,6 +43,7 @@ export interface EventItem {
   judgingCriteria?: string[];
   iconName: string;
   badge?: string;
+  whatsappGroup?: string;
   isActive: boolean;
 }
 
@@ -74,6 +75,7 @@ export const SYMPOSIUM_METADATA = {
   registrationUrl: GOOGLE_FORM_REGISTRATION_URL,
   email: "contact@aetherion26.org",
   pricingOffer: PRICING_DETAIL,
+  teamSizeNote: "Solo pass covers individual entry; team pass covers 2–3 members.",
   stats: [
     { label: "Technical Events", value: "5", prefix: "" },
     { label: "Non-Technical Events", value: "5", prefix: "" },
@@ -125,6 +127,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Cpu',
     badge: 'Popular',
+    whatsappGroup: 'https://chat.whatsapp.com/CetTsyTFMzqHGlTzCl3LnT?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
   {
@@ -170,6 +173,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Terminal',
     badge: 'Hardcore',
+    whatsappGroup: 'https://chat.whatsapp.com/G5625zkJdm79kQSOFiGZkt',
     isActive: true,
   },
   {
@@ -212,6 +216,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Presentation',
     badge: 'Research',
+    whatsappGroup: 'https://chat.whatsapp.com/Jj4dS9O6PX70G3y5A5uVoG?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
   {
@@ -260,6 +265,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Palette',
     badge: 'Creative',
+    whatsappGroup: 'https://chat.whatsapp.com/JrZfr778OX8K2LGkLSOyqd?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
   {
@@ -301,6 +307,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Terminal',
     badge: 'Hardcore',
+    whatsappGroup: 'https://chat.whatsapp.com/GjKrUEedTpBHli1xGP2sMH?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
 
@@ -341,6 +348,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Gamepad2',
     badge: 'High Stakes',
+    whatsappGroup: 'https://chat.whatsapp.com/BA5Ucw5FQUV6tJatw7jcUl?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
   {
@@ -383,6 +391,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Film',
     badge: 'Exciting',
+    whatsappGroup: 'https://chat.whatsapp.com/LQc0bUDaDqIIOBXVwWj0cL?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
   {
@@ -423,6 +432,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Mic2',
     badge: 'Live',
+    whatsappGroup: 'https://chat.whatsapp.com/D6CpiWCrxsp7ndyOd2kpHB?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
   {
@@ -464,6 +474,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Palette',
     badge: 'Creative',
+    whatsappGroup: 'https://chat.whatsapp.com/IcWbxZ0odhU43E009prJ2m',
     isActive: true,
   },
   {
@@ -508,6 +519,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Sparkles',
     badge: 'Fun & Witty',
+    whatsappGroup: 'https://chat.whatsapp.com/CIGqOs8x4757Q17PxsdQuV?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
 
@@ -564,6 +576,7 @@ export const EVENTS_DATA: EventItem[] = [
     ],
     iconName: 'Gamepad2',
     badge: 'High Stakes',
+    whatsappGroup: 'https://chat.whatsapp.com/BA5Ucw5FQUV6tJatw7jcUl?s=cl&p=a&mlu=0&ilr=4',
     isActive: true,
   },
 ];
